@@ -104,61 +104,65 @@
         </div>
 
         <div class="wrapper2">
-            <div class="infoProgress">
-                <p>Вы заполнили профиль на 70%</p>
-                <div class="progressBar">
-                    <div class="fullProgress">
-                    </div>
-                </div>
-                <a href="#">Заполнить еще -></a>
-            </div>
-
-            <div class="themes">
-                <div class="theme">
-                    <div class="leftCnt">
-                        <img src="../img/pokemon-colors.svg" alt="image">
-                        <p>Спорт -></p>
-                    </div>
-                    <div class="rightCnt">
-                        <p class="score">18</p>
+            <div class="contain-down">
+                <div class="infoProgress">
+                    <div class="wrapProgress">
+                        <p>Вы заполнили профиль на 70%</p>
+                        <div class="progressBar">
+                            <div class="fullProgress">
+                            </div>
+                        </div>
+                        <a href="#">Заполнить еще -></a>
                     </div>
                 </div>
 
-                <div class="theme active">
-                    <div class="leftCnt">
-                        <img src="../img/pokemon-white.svg" alt="image">
-                        <p>Гейминг -></p>
+                <div class="themes">
+                    <div class="theme">
+                        <div class="leftCnt">
+                            <img src="../img/pokemon-colors.svg" alt="image">
+                            <p>Спорт -></p>
+                        </div>
+                        <div class="rightCnt">
+                            <p class="score">18</p>
+                        </div>
                     </div>
-                    <div class="rightCnt">
-                        <p class="score">941</p>
-                    </div>
-                </div>
 
-                <div class="theme">
-                    <div class="leftCnt">
-                        <img src="../img/pokemon-colors.svg" alt="image">
-                        <p>Социальный -></p>
+                    <div class="theme active">
+                        <div class="leftCnt">
+                            <img src="../img/pokemon-white.svg" alt="image">
+                            <p>Гейминг -></p>
+                        </div>
+                        <div class="rightCnt">
+                            <p class="score">941</p>
+                        </div>
                     </div>
-                    <div class="rightCnt">
-                        <p class="score">20</p>
-                    </div>
-                </div>
 
-                <div class="theme">
-                    <div class="leftCnt">
-                        <img src="../img/education.svg" alt="image">
-                        <p>Образование -></p>
+                    <div class="theme">
+                        <div class="leftCnt">
+                            <img src="../img/pokemon-colors.svg" alt="image">
+                            <p>Социальный -></p>
+                        </div>
+                        <div class="rightCnt">
+                            <p class="score">20</p>
+                        </div>
                     </div>
-                    <div class="rightCnt">
-                        <p class="score">102</p>
+
+                    <div class="theme">
+                        <div class="leftCnt">
+                            <img src="../img/education.svg" alt="image">
+                            <p>Образование -></p>
+                        </div>
+                        <div class="rightCnt">
+                            <p class="score">102</p>
+                        </div>
                     </div>
-                </div>
-                <div class="buttons">
-                    <div class="btn">
-                        <p>Добавить еще</p> <img src="../img/plus-light.svg" alt="icon">
-                    </div>
-                    <div class="btn2">
-                        <p>Смотреть все</p> <img src="../img/arrows-4.svg" alt="icon">
+                    <div class="buttons">
+                        <div class="btn">
+                            <p>Добавить еще</p> <img src="../img/plus-light.svg" alt="icon">
+                        </div>
+                        <div class="btn2">
+                            <p>Смотреть все</p> <img src="../img/arrows-4.svg" alt="icon">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -223,6 +227,7 @@ export default {
     border-radius: 10px;
     transition: all .5s;
     position: absolute;
+    padding-bottom: 16px;
 }
 
 .edit {
@@ -316,14 +321,15 @@ export default {
     padding-bottom: 14px;
     outline: none;
     height: 20px;
-    width: 455px;
+    width: 440px;
     border: none;
-    box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.085);
+    box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.075);
     border-radius: 6px;
     font-size: 15px;
     line-height: 20px;
     margin-top: 30px;
     margin-left: 380px;
+    margin-right: 20px;
 }
 
 /* Chat */
@@ -433,15 +439,19 @@ export default {
 /* wrapper2 infoProgress */
 
 .wrapper2 {
-    width: 360px;
-    margin-left: 150px;
     margin-top: -70px;
+}
+
+.contain-down {
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
 .infoProgress {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    text-align: center;
 }
 
 .infoProgress p{
@@ -461,6 +471,10 @@ export default {
     margin-top: 10px;
 }
 
+.infoProgress .wrapProgress {
+    margin-left: 65px;
+}
+
 .progressBar {
     width: 230px;
     height: 8px;
@@ -478,7 +492,7 @@ export default {
 .themes {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 40px;
 }
 
